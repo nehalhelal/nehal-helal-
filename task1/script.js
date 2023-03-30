@@ -1,6 +1,7 @@
 const myForm = document.querySelector("#myForm");
 const userWrap = document.querySelector("#userWrap");
 const singleData = document.querySelector("#singleData");
+const editData = document.querySelector('#edit')
 
 const heads = ["name", "age", "email", "Sutue"];
 
