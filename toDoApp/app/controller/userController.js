@@ -118,6 +118,19 @@ class User {
     }
   };
   // *************** search******************
+    for (var i = 0; i <  allUsers.length; i++) {
+//      ---inclued any in title and content
+      
+//         if( 
+//            allUsers[i].title.includes(search)
+//            allUsers[i].content.includes(search)
+//              )}    
+         
+  
+  
+//   ------------------------------------
+  
+  
   static search = (req, res) => {
     let search = req.query.search;
     let results = [];
@@ -136,5 +149,8 @@ class User {
       hasData: results.length,
     });
   };
+  
+//  
+    
 }
 module.exports = User;
