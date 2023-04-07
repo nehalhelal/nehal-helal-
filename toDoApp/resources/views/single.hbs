@@ -1,0 +1,22 @@
+{{>header}}
+{{>nav}}
+<section class="my-5 container">
+    {{#if user}}
+    <div>
+<div class="card" style="card text-bg-success mb-3" "width: 18rem;" >
+  <ul class="list-group list-group-flush">
+    <li class="list-group-item"><h3>id: {{user.id}}</h3></li>
+    <li class="list-group-item"><h3> title:{{user.title}}</h3></li>
+    <li class="list-group-item"> <h3> content: {{user.content}}</h3></li>
+    <li class="list-group-item"> <h3> status:{{user.status}}</h3></li>
+    <li class="list-group-item">  <h3> date:{{user.date}}</h3></li>
+  </ul>
+</div>
+
+    {{else}}
+    <div class="alert alert-danger">
+        Not asks are found
+    </div>
+    {{/if}}
+</section>
+{{>footer}}

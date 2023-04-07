@@ -1,0 +1,72 @@
+{{>header}}
+{{>nav}}
+
+<section class="container my-5">
+    <h3>search on all tasks</h3>
+    <form class="d-flex mb-2" role="search" method="get" action="/search">
+        <input
+          class="form-control me-3"
+          type="search"
+          id="search"
+          placeholder="search"
+          aria-label="Search"
+          name="search"
+        />
+        <button class="btn btn-dark" type="submit">Search</button>
+      </form>
+</section>
+ {{!-- ******* --}}
+<section class="container my-5">
+    
+    <h3>ALL TASKS</h3>
+    <div class="d-flex justify-content-between mb-4">
+            <a href="/add" class="btn btn-primary">
+                Add Task
+            </a>
+            <a href="/delAll" class="btn btn-danger">
+                Delete All
+            </a>
+             <a href="/showAll" class="btn btn-primary">
+                Show All
+            </a>
+    </div>
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+            <th>id</th>
+            <th>title</th>
+            <th>content</th>
+            <th>Status</th>
+            <th>Date</th>
+            <th>Actions</th>
+            
+            </tr>
+        </thead>
+        <tbody>
+            {{#if hasData}}
+            {{#each allUsers}}
+            <tr>
+                <td>{{id}}</td>
+                <td>{{title}}</td>
+                <td>{{content}}</td>
+                <td>{{status}}</td>
+                <td>{{date}}</td>
+                
+                <td>
+                    <a href="/single/{{id}}" class="btn btn-primary mx-3">Show</a>
+                    <a href="/edit/{{id}}" class="btn btn-warning mx-3">Edit</a>
+                    <a href="/del/{{id}}" class="btn btn-danger mx-3">Delete</a>
+                    <a href="/status/{{id}}" class="btn btn-success mx-3">active status</a>
+                    
+                </td>
+            </tr>
+            {{/each}}
+            {{else}}
+            <tr>
+                <td colspan="5">No tasks yet</td>
+            </tr>
+            {{/if}}
+        </tbody>
+    </table>
+</section>
+{{>footer}}
