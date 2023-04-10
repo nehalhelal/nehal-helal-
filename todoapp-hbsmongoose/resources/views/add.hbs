@@ -1,0 +1,30 @@
+{{>header}}
+{{>nav}}
+<section class="container my-5">
+    <h2>Add task</h2>
+    <form action="/addLogic">
+        <div class="mb-3">
+            <input name="title" class="form-control" placeholder="title">
+        </div>
+         <div class="mb-3">
+            <input name="content" class="form-control" placeholder="content" value="{{user.content}}">
+        </div>
+        <div class="mb-3">
+            <select name="status" class="form-select">
+                    <option value="{{user.status}}" selected disabled>{{user.status}}</option>
+                    {{!-- <option value="active" >active</option> --}}
+                    <option value="inactive" >inactive</option>
+                </select>
+                </div>
+        <div class="mb-3">
+<input type="date" class="form-control" name="date" placeholder="date">    
+</div>
+
+
+        <div class="mb-3">
+            <button class="btn btn-primary">Add</button>
+        </div>
+    </form>
+</section>
+
+{{>footer}}

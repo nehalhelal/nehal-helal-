@@ -1,0 +1,34 @@
+{{>header}}
+{{>nav}}
+<section class="my-5 container">
+
+    <h3  class="card-title"> SHOW ALL TASKS</h3>
+     {{#if hasData}}
+            {{#each allUsers}}
+<div class="list-group">
+  <a href="#" class="list-group-item list-group-item-action flex-column align-items-start active">
+    <div class="d-flex w-100 justify-content-between">
+      <h5 class="mb-1"> task   </h5>
+      <small ><ol>all</ol></small>
+    </div>
+       <ul class="list-group">
+  <li class="list-group-item disabled"> <strong>id: </strong> {{id}}</li>
+  <li class="list-group-item"><strong>Title:</title>: </strong> {{title}}</li>
+  <li class="list-group-item"><strong>Content: </strong> {{content}}</li>
+  <li class="list-group-item"><strong>Status: </strong> {{status}}</li>
+  <li class="list-group-item" ><strong>Date: </strong> {{date}} </li>
+</ul>
+  
+</div>
+<br>
+
+          
+
+            {{/each}}
+            {{else}}
+    
+                <h1 > <p class="text-info">No users yet to Show</p></h1> 
+            
+            {{/if}}
+</section>
+{{>footer}}
