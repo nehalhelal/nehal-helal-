@@ -1,0 +1,85 @@
+{
+	"info": {
+		"_postman_id": "9c214617-598f-40ce-a865-1b19054abd58",
+		"name": "fitnessapp",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "users",
+			"item": [
+				{
+					"name": "register",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"fname\":\"nehal\",\r\n    \"lname\":\"helal\",\r\n    \"age\":\"25\",\r\n    \"email\":\"nehal5.helal777@gmail.com\",\r\n     \"password\":\"1234567\",\r\n    \"gender\":\"female\",\r\n    \"isAdmin\":\"false\",\r\n    \"phone\":\"01097102080\",\r\n     \" adresses\":\"New Damietta\"\r\n\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}user/register",
+							"host": [
+								"{{url}}user"
+							],
+							"path": [
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "all users",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}user",
+							"host": [
+								"{{url}}user"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "meals",
+			"item": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "url",
+			"value": "localhost:3007/api/",
+			"type": "default"
+		}
+	]
+}

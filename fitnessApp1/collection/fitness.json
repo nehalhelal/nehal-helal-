@@ -1,0 +1,210 @@
+{
+	"info": {
+		"_postman_id": "bb9a3eac-07ab-4a26-a52e-8d280abf00c2",
+		"name": "fitness",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "users",
+			"item": [
+				{
+					"name": "all users",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}user/single",
+							"host": [
+								"{{url}}user"
+							],
+							"path": [
+								"single"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "register",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"fname\":\"nehal\",\r\n    \"lname\":\"helal\",\r\n    \"age\":\"25\",\r\n    \"email\":\"nehal.helal777@gmail.com\",\r\n    \"gender\":\"femal\",\r\n    \"password\":\"123568\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}user/register",
+							"host": [
+								"{{url}}user"
+							],
+							"path": [
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "single",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "delete",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "delALL",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{url}}user/login",
+							"host": [
+								"{{url}}user"
+							],
+							"path": [
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "editesingle",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "activate",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "profile",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NDMzZjdkMDBiNTY0YTNjOGYwNjZkYmIiLCJpYXQiOjE2ODEyMDgxODV9.RI6Nq7dfBfOEgRhOTO-mItGFEaTrKucb0QjfP4_st5I",
+								"type": "default"
+							}
+						],
+						"url": {
+							"raw": "{{url}}user/profile",
+							"host": [
+								"{{url}}user"
+							],
+							"path": [
+								"profile"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "logout",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NDMzZjdkMDBiNTY0YTNjOGYwNjZkYmIiLCJpYXQiOjE2ODEyMDgxODV9.RI6Nq7dfBfOEgRhOTO-mItGFEaTrKucb0QjfP4_st5I",
+								"type": "default"
+							}
+						],
+						"url": {
+							"raw": "{{url}}user/logout",
+							"host": [
+								"{{url}}user"
+							],
+							"path": [
+								"logout"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "logoutAll",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NDMzZjdkMDBiNTY0YTNjOGYwNjZkYmIiLCJpYXQiOjE2ODEyMTMzMzV9.-sgkAyL1uVDvivyLZGwA6Ab9CAeLo0R7TbSsYHbftXk",
+								"type": "default"
+							}
+						],
+						"url": {
+							"raw": "{{url}}user/logoutAll",
+							"host": [
+								"{{url}}user"
+							],
+							"path": [
+								"logoutAll"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "url",
+			"value": "localhost:7777/api/",
+			"type": "default"
+		}
+	]
+}
