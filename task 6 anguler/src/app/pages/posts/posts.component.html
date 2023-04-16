@@ -1,0 +1,39 @@
+<div class="container">
+    <div class="row mt-4 gy-4">
+      <div class="col-12">
+        <input
+          type="text"
+          placeholder="search"
+          [(ngModel)]="searchValue"
+          (input)="handleSearch()"
+        />
+      </div>
+    </div>
+    <div class="col-12 col-md-4"  *ngIf="!searchArr; else elseBlock">
+        <div class="card"  *ngFor="let post of postsArr">
+          <div class="card-body">
+            <p></p>
+            <h5 class="card-title" [innerHTML]="post.title"></h5>
+            <p class="card-text"  [innerHTML]="post.body">
+
+            </p>
+          </div>
+        </div>
+      </div>
+    
+    <ng-template #elseBlock>
+      <div class="row my-4">
+        
+          <div class="card" *ngFor="let post of searchArr">
+            <div class="card-body">
+              <p></p>
+              <h5 class="card-title" [innerHTML]="post.title"></h5>
+              <p class="card-text"  [innerHTML]="post.body">
+    
+              </p>
+            </div>
+          </div>
+        
+      </div>
+    </ng-template>
+  </div>
