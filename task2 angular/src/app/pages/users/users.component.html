@@ -1,0 +1,36 @@
+<div class="container">
+    <app-user-form (sendingUserData)="handlerUser($event)"></app-user-form>
+    <table class="table">
+      <thead>
+        <td>
+          <tr>
+            Name
+          </tr>
+        </td>
+        <td>
+          <tr>
+            Email
+          </tr>
+        </td>
+        <td>
+          <tr>
+            Actions
+          </tr>
+        </td>
+      </thead>
+      <tbody>
+        <tr *ngFor="let user of users; let i = index">
+          <td>{{ user.username }}</td>
+          <td>{{ user.email }}</td>
+          <td>
+            <button class="btn btn-danger" (click)="deleteUser($event)">
+              Delete user
+            </button>
+          </td>
+          <td>
+            <button class="btn btn-primary" (click)="editUser(i)">Edit Email</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
