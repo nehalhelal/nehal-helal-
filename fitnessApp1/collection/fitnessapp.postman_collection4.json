@@ -1,0 +1,558 @@
+{
+	"info": {
+		"_postman_id": "9c214617-598f-40ce-a865-1b19054abd58",
+		"name": "fitnessapp",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "users",
+			"item": [
+				{
+					"name": "Auth",
+					"item": [
+						{
+							"name": "register",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"fname\":\"hager\",\r\n    \"lname\":\"helal\",\r\n    \"age\":\"25\",\r\n    \"email\":\"hagerl211.helal@gmail.com\",\r\n     \"password\":\"1234567\",\r\n    \"gender\":\"female\",\r\n    \"isAdmin\":\"false\",\r\n    \"phone\":\"01097102081\",\r\n     \" adresses\":\"New Damietta\"\r\n    \r\n\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url}}user/register",
+									"host": [
+										"{{url}}user"
+									],
+									"path": [
+										"register"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "all users",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NDM5Y2E3OWNlMmMwMTFiMjgyYWYxMjQiLCJpYXQiOjE2ODE1MDkwNTF9.GJlopQ6Vnp8LwjDbsf6d9-5TagSnrHBjZg-4Dev3aO4",
+										"type": "default"
+									}
+								],
+								"url": {
+									"raw": "{{url}}user",
+									"host": [
+										"{{url}}user"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "single user",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{url}}user/single/6439aaeeea278a53a1f89653",
+									"host": [
+										"{{url}}user"
+									],
+									"path": [
+										"single",
+										"6439aaeeea278a53a1f89653"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "delete single",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{url}}user/single/643954f769d67a5ca8a9b13b",
+									"host": [
+										"{{url}}user"
+									],
+									"path": [
+										"single",
+										"643954f769d67a5ca8a9b13b"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "delete all",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{url}}user",
+									"host": [
+										"{{url}}user"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "   edit single user",
+							"request": {
+								"method": "PATCH",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "\r\n\r\n{\r\n    \"fname\":\"hager\"\r\n\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url}}user/single/64396313600ccf46bce5bc16",
+									"host": [
+										"{{url}}user"
+									],
+									"path": [
+										"single",
+										"64396313600ccf46bce5bc16"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "edit all users",
+							"request": {
+								"method": "PATCH",
+								"header": [],
+								"url": {
+									"raw": "{{url}}user",
+									"host": [
+										"{{url}}user"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "login",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n      \"email\":\"nehal.helal@gmail.com\",\r\n     \"password\":\"1234567\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url}}user/login",
+									"host": [
+										"{{url}}user"
+									],
+									"path": [
+										"login"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "activate",
+							"request": {
+								"method": "PATCH",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "\r\n\r\n{\r\n    \"fname\":\"hager\",\r\n    \"email\":\"hager.helal777@gmail.com\",\r\n    \"phone\":\"01127102070\",\r\n    \"password\":\"12345678\"\r\n\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url}}user/activate/6439aa11ea278a53a1f8963e",
+									"host": [
+										"{{url}}user"
+									],
+									"path": [
+										"activate",
+										"6439aa11ea278a53a1f8963e"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "profile",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NDM5NTliZjI4NzUxZDM4NDYyMDdjNWYiLCJpYXQiOjE2ODE1MDA4MjJ9.EpHc8SmxFIWV_UyOuNi9r_rZQFj9_eJ4VUG_yE5nHJs",
+										"type": "default"
+									}
+								],
+								"url": {
+									"raw": "{{url}}user/profile",
+									"host": [
+										"{{url}}user"
+									],
+									"path": [
+										"profile"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "logout",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NDM5YzljM2NlMmMwMTFiMjgyYWYxMTYiLCJpYXQiOjE2ODE1MDg4MTZ9.Of7hmTK5E0gVzkaGw_-RczmQQczNxlf479QnTVo5hQM",
+										"type": "default"
+									}
+								],
+								"url": {
+									"raw": "{{url}}user/logout",
+									"host": [
+										"{{url}}user"
+									],
+									"path": [
+										"logout"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "logout all",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NDM5NTliZjI4NzUxZDM4NDYyMDdjNWYiLCJpYXQiOjE2ODE1MDY5NzJ9.yt_FWRgG85mteCnidnrMSNJgQRXtrz9vtyHJSPkDNQs",
+										"type": "default"
+									}
+								],
+								"url": {
+									"raw": "{{url}}user/logoutAll",
+									"host": [
+										"{{url}}user"
+									],
+									"path": [
+										"logoutAll"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "updateProfileimg",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{token}}",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "img",
+									"type": "file",
+									"src": "/C:/Users/Computec/Pictures/4k-wallpaper-architecture-background-1308624.jpg"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}user/updateProfileimg",
+							"host": [
+								"{{url}}user"
+							],
+							"path": [
+								"updateProfileimg"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "meals",
+			"item": [
+				{
+					"name": "add meal",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{token}}",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\": \"Keto  Chicken987\",\r\n     \"mealType\":\"txt\",\r\n     \"content\": \"Cut the chicken up into bite sized chunks and generously coat them in the turmeric, ginger, salt, chili powder and cinnamon. 2-Set aside in a bowlHeat a skillet to medium heat and add the butter. As the butter melts dice the onion and garlic and add it to the pan. 3-Cook for 2-3 minutes until the onions are translucent and fragrant.Increase the pan heat to medium-high and add the chicken. Cook it almost entirely through – the outside should be white and this will take about 3-5 minutes.4-Once the chicken looks almost fully cooked add in the heavy whipping cream and tomato paste. 5-Using a spatula mix in the tomato paste so it runs smooth through the heavy whipping cream. It should be an orange color at this point. Turn the heat to medium-low and cover with a lid for 5-7 minutes.Remove lid and combine. The chicken is fully cooked and you should be able to eat it. 6-However, if you like a thicker curry sauce allow it to reduce with the lid off until it reaches the consistency you like.Serve with low carb naan or over cauliflower rice. Enjoy!You can store the butter chicken in a sealed container for up to 10 days in the fridge and 2 months in the freezer. You can also use chicken thighs instead of breast for a higher fat content.\",\r\n     \"image\":\"file\",\r\n    //   \"file\":,\r\n      \r\n        \"price\":\"80\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}meal/addMeal",
+							"host": [
+								"{{url}}meal"
+							],
+							"path": [
+								"addMeal"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "all meals",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "",
+								"type": "default",
+								"disabled": true
+							}
+						],
+						"url": {
+							"raw": "{{url}}meal",
+							"host": [
+								"{{url}}meal"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "my meals",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{token}}",
+								"type": "default"
+							}
+						],
+						"url": {
+							"raw": "{{url}}meal/myMeal",
+							"host": [
+								"{{url}}meal"
+							],
+							"path": [
+								"myMeal"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": " delete all meals",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{token}}",
+								"type": "default"
+							}
+						],
+						"url": {
+							"raw": "{{url}}meal",
+							"host": [
+								"{{url}}meal"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "single meal",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{token}}",
+								"type": "default"
+							}
+						],
+						"url": {
+							"raw": "{{url}}meal/singleMeal/643a5fc881b4c4b16f07f11b",
+							"host": [
+								"{{url}}meal"
+							],
+							"path": [
+								"singleMeal",
+								"643a5fc881b4c4b16f07f11b"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": " delete single meal",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{token}}",
+								"type": "default"
+							}
+						],
+						"url": {
+							"raw": "{{url}}meal/all/6439e9ce0b4afa0374f0b784",
+							"host": [
+								"{{url}}meal"
+							],
+							"path": [
+								"all",
+								"6439e9ce0b4afa0374f0b784"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "edit meal",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{token}}",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n   \"title\": \"meat and vegit\" \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}meal/all/643a5fc881b4c4b16f07f11b",
+							"host": [
+								"{{url}}meal"
+							],
+							"path": [
+								"all",
+								"643a5fc881b4c4b16f07f11b"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "meal update Profile image",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "{{token}}",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "img",
+									"type": "file",
+									"src": "/D:/NEHAL/ntijs/2-final project/img/1.jpg"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}meal/updateProfileimg",
+							"host": [
+								"{{url}}meal"
+							],
+							"path": [
+								"updateProfileimg"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "url",
+			"value": "localhost:3007/api/",
+			"type": "default"
+		},
+		{
+			"key": "token",
+			"value": "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NDM5Y2E3OWNlMmMwMTFiMjgyYWYxMjQiLCJpYXQiOjE2ODE1MTk3MTN9.C8--E9xAphK20lPEfQnkZ7DTwGb8jaQKUk3VPYfbzwE",
+			"type": "default"
+		}
+	]
+}

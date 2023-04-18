@@ -25,6 +25,9 @@ app.use("/api/user", userRoutes);
 const mealRoutes = require("../routes/meal.route");
 app.use("/api/meal", mealRoutes);
 
+const orderRoutes = require("../routes/order.route");
+app.use("/api/order", orderRoutes);
+
 app.all("*", (req, res) =>
   res.status(404).send({ apistatus: false, data: null, message: "invalid url" })
 );

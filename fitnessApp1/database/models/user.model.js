@@ -39,6 +39,8 @@ const userSchema = mongoose.Schema(
       },
     },
 
+    
+
     // schema to incoded pass
     password: {
       type: String,
